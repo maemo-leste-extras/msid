@@ -153,6 +153,7 @@ void * download_thread(void *arg)
   //
   const char *mirrors[] = {
     "https://www.prg.dtu.dk/HVSC/C64Music",
+    "https://kohina.duckdns.org/HVSC/C64Music/",
     NULL
   };
 

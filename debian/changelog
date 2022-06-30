@@ -1,3 +1,9 @@
+msid (0.4.8-4+leste1) unstable; urgency=low
+
+  * updated mirror list
+
+ -- Norayr Chilingarian <norayr@arnet.am>  Tue, 30 Jun 2022 19:40:36 +0400
+
 msid (0.4.8-3+leste1) unstable; urgency=low
 
   * port to maemo leste
