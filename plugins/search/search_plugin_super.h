@@ -1,28 +1,5 @@
-/*
- * Copyright (C) 2008 Tapani Pälli <lemody@c64.org>
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- *
- */
-
 #ifndef MSID_SUPER_SEARCH_PLUGIN
 #define MSID_SUPER_SEARCH_PLUGIN
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -30,6 +7,11 @@ extern "C" {
 
 #include "../search_iface.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// C++ class definition (no extern "C")
 class super_search : public msid_search_plugin
 {
   public :
@@ -44,8 +26,7 @@ class super_search : public msid_search_plugin
   GTree *tree;
 };
 
-// class factories
-
+// Only wrap C-style functions in extern "C"
 extern "C" void* create() {
   return new super_search;
 }
@@ -59,3 +40,4 @@ extern "C" void destroy (void *plug) {
 #endif
 
 #endif
+
